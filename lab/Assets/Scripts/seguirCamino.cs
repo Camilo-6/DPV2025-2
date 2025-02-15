@@ -3,9 +3,9 @@ using UnityEngine;
 public class seguirCamino : MonoBehaviour
 {
     // Puntos del camino
-    public Transform[] puntos;
+    [SerializeField] private Transform[] puntos;
     // Velocidad
-    public float velocidad = 3.0f;
+    [SerializeField] private float velocidad = 3.0f;
     // Punto actual
     private int puntoActual = 0;
 
