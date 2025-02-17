@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - enemigo
   - puntos
+  - powerup
   layers:
   - Default
   - TransparentFX
