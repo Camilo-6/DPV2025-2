@@ -14,6 +14,7 @@ public class obtenerPuntos : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        // Si el objeto colisiona con un punto, lo destruye y obtiene 10 puntos
         if (other.gameObject.tag == "puntos")
         {
             Destroy(other.gameObject);
