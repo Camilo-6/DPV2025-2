@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class poderEsp : MonoBehaviour
+public class poderI : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
