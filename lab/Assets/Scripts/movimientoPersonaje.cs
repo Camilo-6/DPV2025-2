@@ -8,14 +8,19 @@ public class movimientoPersonaje : MonoBehaviour
     [SerializeField] private Vector3 direccion;
     // Gravedad
     [SerializeField] private float gravedad;
+    // Salto
+    [SerializeField] private float salto;
     // Controlador de personaje
     [SerializeField] private CharacterController cc;
+    // Rigidbody
+    [SerializeField] private Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         this.cc = this.gameObject.GetComponent<CharacterController>();
         velocidad = velocidadOriginal = 3.0f;
+        this.rb = this.gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -33,6 +38,13 @@ public class movimientoPersonaje : MonoBehaviour
         //this.transform.position += direccion * Time.deltaTime;
         // Mover el personaje
         this.cc.Move(direccion * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Salto");
+            //direccion.y += salto;
+            //this.rb.AddForce(direccion * salto, ForceMode.Impulse);
+        }
     }
 
     // Setter de la velocidad

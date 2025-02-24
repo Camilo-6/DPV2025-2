@@ -26,7 +26,6 @@ public class poderV : MonoBehaviour
         mp.setVelocidad(5.0f);
         // Esperar 3 segundos
         yield return new WaitForSeconds(3.0f);
-        Debug.Log("Poder desactivado");
         // Resetear la velocidad del personaje
         mp.resetVelocidad();
         // Destruir este objeto
