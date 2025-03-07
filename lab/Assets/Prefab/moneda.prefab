@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3959726281792002559
+--- !u!1 &3047291988272470138
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3892078326700132021}
-  - component: {fileID: 6637968780924388722}
-  - component: {fileID: 8974407779155816857}
-  - component: {fileID: 597400956985764719}
-  - component: {fileID: 8481668533772750529}
+  - component: {fileID: 7085063845028530631}
+  - component: {fileID: 2769019907584067664}
+  - component: {fileID: 2594210456661681244}
+  - component: {fileID: 3390281426528986439}
+  - component: {fileID: 1378024909222437601}
   m_Layer: 0
-  m_Name: poderG
-  m_TagString: powerup
+  m_Name: moneda
+  m_TagString: puntos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3892078326700132021
+--- !u!4 &7085063845028530631
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959726281792002559}
+  m_GameObject: {fileID: 3047291988272470138}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.27, y: -0.362, z: -2.22}
-  m_LocalScale: {x: 0.37924, y: 0.37924, z: 0.37924}
+  m_LocalRotation: {x: -0, y: -0, z: -0.707398, w: 0.7068155}
+  m_LocalPosition: {x: -2.5983, y: 0, z: -0.69598}
+  m_LocalScale: {x: 0.38655636, y: 0.029773902, z: 0.394454}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6637968780924388722
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.047}
+--- !u!33 &2769019907584067664
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959726281792002559}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8974407779155816857
+  m_GameObject: {fileID: 3047291988272470138}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2594210456661681244
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959726281792002559}
+  m_GameObject: {fileID: 3047291988272470138}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f809c338dd1b7d94f98e9d0bffd16837, type: 2}
+  - {fileID: 2100000, guid: e39cbcdd8c7a56d41859fa7c3e6694cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,13 +88,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &597400956985764719
-SphereCollider:
+--- !u!136 &3390281426528986439
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959726281792002559}
+  m_GameObject: {fileID: 3047291988272470138}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,18 +106,21 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8481668533772750529
+  serializedVersion: 2
+  m_Radius: 0.49129423
+  m_Height: 13.017639
+  m_Direction: 1
+  m_Center: {x: 0.0018335022, y: -0.16409075, z: -0.000000115727964}
+--- !u!114 &1378024909222437601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3959726281792002559}
+  m_GameObject: {fileID: 3047291988272470138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b0e5aa2ce59c04cbe523f3db745d9d, type: 3}
+  m_Script: {fileID: 11500000, guid: c87c7a304a733c84fb51a31238f6eb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocidad: 1

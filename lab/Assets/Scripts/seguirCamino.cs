@@ -5,7 +5,7 @@ public class seguirCamino : MonoBehaviour
     // Puntos del camino
     [SerializeField] private Transform[] puntos;
     // Velocidad
-    [SerializeField] private float velocidad = 3.0f;
+    [SerializeField] private float velocidad = 4.0f;
     // Punto actual
     private int puntoActual = 0;
 

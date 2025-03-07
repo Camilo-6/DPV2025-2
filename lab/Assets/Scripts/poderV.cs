@@ -20,14 +20,33 @@ public class poderV : MonoBehaviour
         // Desactivar el objeto
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
         this.gameObject.GetComponent<Collider>().enabled = false;
+        // Lo siguiente es para el cerdito
         // Obtener el script de movimientoPersonaje
         movimientoPersonaje mp = player.GetComponent<movimientoPersonaje>();
         // Aumentar la velocidad del personaje
-        mp.setVelocidad(5.0f);
-        // Esperar 3 segundos
-        yield return new WaitForSeconds(3.0f);
+        if (mp != null)
+        {
+            mp.setVelocidad(5.0f);
+        }
+        // Obtener el script de movimientoBueno
+        movimientoBueno mb = player.GetComponent<movimientoBueno>();
+        // Almacenar la velocidad actual del personaje
+        if (mb != null)
+        {
+            // Aumentar la velocidad del personaje
+            mb.setVelocidad(10.0f);
+        }
+        // Esperar 5 segundos
+        yield return new WaitForSeconds(5.0f);
         // Resetear la velocidad del personaje
-        mp.resetVelocidad();
+        if (mp != null)
+        {
+            mp.resetVelocidad();
+        }
+        if (mb != null)
+        {
+            mb.resetVelocidad();
+        }
         // Destruir este objeto
         Destroy(this.gameObject);
     }

@@ -42,8 +42,8 @@ public class poderI : MonoBehaviour
                 renderers[i].material.color = nuevoColor;
             }
         }
-        // Esperar 3 segundos
-        yield return new WaitForSeconds(3.0f);
+        // Esperar 4 segundos
+        yield return new WaitForSeconds(4.0f);
         if (renderers.Length > 0)
         {
             // Restaurar los colores originales

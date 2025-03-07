@@ -18,7 +18,13 @@ public class chocarEnemigo : MonoBehaviour
         {
             if (!inmunidad)
             {
-                // Si no tiene inmunidad, se destruye este objeto
+                // Desanidar la camara antes de destruir el jugador
+                Camera.main.transform.SetParent(null);
+                // Mover la camara a (0, 0.673, 0.045)
+                Camera.main.transform.position = new Vector3(0, 0.673f, 0.045f);
+                // Rotar la camara a (0, 0, 0)
+                Camera.main.transform.rotation = Quaternion.Euler(0, 0, 0);
+                // Destruir el jugador
                 Destroy(gameObject);
             }
             else

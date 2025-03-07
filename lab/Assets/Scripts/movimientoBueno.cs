@@ -14,9 +14,11 @@ public class movimientoBueno : MonoBehaviour
     // Velocidad de rotacion
     [SerializeField] private float velocidadRotacion = 5.0f;
     // Salto
-    [SerializeField] private float salto = 400.0f;
+    [SerializeField] private float salto = 300.0f;
     // Velocidad
     [SerializeField] private float velocidad = 5.0f;
+    // Velocidad inicial
+    [SerializeField] private float velocidadInicial;
     // Animator
     [SerializeField] private Animator anim;
     // Vertical
@@ -27,6 +29,7 @@ public class movimientoBueno : MonoBehaviour
     {
         this.cc = this.gameObject.GetComponent<CharacterController>();
         this.anim = this.gameObject.GetComponent<Animator>();
+        this.velocidadInicial = velocidad;
     }
 
     // Update is called once per frame
@@ -61,5 +64,17 @@ public class movimientoBueno : MonoBehaviour
         direccion -= new Vector3(0, gravedad * Time.deltaTime, 0);
         cc.transform.Rotate(new Vector3(0, rotacion, 0));
         cc.Move(direccion * Time.deltaTime);
+    }
+
+    // Establecer la velocidad
+    public void setVelocidad(float velocidad)
+    {
+        this.velocidad = velocidad;
+    }
+
+    // Restrablecer la velocidad
+    public void resetVelocidad()
+    {
+        this.velocidad = velocidadInicial;
     }
 }

@@ -32,8 +32,8 @@ public class poderG : MonoBehaviour
         {
             cc.radius = cc.radius * 1.2f;
         }
-        // Esperar 4 segundos?
-        yield return new WaitForSeconds(4.0f);
+        // Esperar 5 segundos?
+        yield return new WaitForSeconds(5.0f);
         // Resetear el tamanio del jugador
         if (playerTransform != null)
         {
