@@ -14,7 +14,7 @@ public class movimientoBueno : MonoBehaviour
     // Velocidad de rotacion
     [SerializeField] private float velocidadRotacion = 5.0f;
     // Salto
-    [SerializeField] private float salto = 250.0f;
+    [SerializeField] private float salto = 200.0f;
     // Velocidad
     [SerializeField] private float velocidad = 5.0f;
     // Velocidad inicial

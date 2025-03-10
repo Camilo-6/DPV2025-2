@@ -2781,6 +2781,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6ebc66c1096877749a59a3c5ed288ea2, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2991,7 +2995,7 @@ MonoBehaviour:
   gravedad: 10
   rotacion: 0
   velocidadRotacion: 5
-  salto: 250
+  salto: 200
   velocidad: 5
   velocidadInicial: 0
   anim: {fileID: 0}
