@@ -12,6 +12,8 @@ TagManager:
   - enemigo
   - puntos
   - powerup
+  - gun
+  - bala
   layers:
   - Default
   - TransparentFX

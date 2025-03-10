@@ -14,7 +14,7 @@ public class movimientoBueno : MonoBehaviour
     // Velocidad de rotacion
     [SerializeField] private float velocidadRotacion = 5.0f;
     // Salto
-    [SerializeField] private float salto = 300.0f;
+    [SerializeField] private float salto = 250.0f;
     // Velocidad
     [SerializeField] private float velocidad = 5.0f;
     // Velocidad inicial
@@ -23,6 +23,12 @@ public class movimientoBueno : MonoBehaviour
     [SerializeField] private Animator anim;
     // Vertical
     [SerializeField] private float vertical;
+    // Holder
+    [SerializeField] private Transform holder;
+    // Gun
+    [SerializeField] private GameObject gun;
+    // Bala
+    [SerializeField] private GameObject bala;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -64,6 +70,12 @@ public class movimientoBueno : MonoBehaviour
         direccion -= new Vector3(0, gravedad * Time.deltaTime, 0);
         cc.transform.Rotate(new Vector3(0, rotacion, 0));
         cc.Move(direccion * Time.deltaTime);
+
+        // Disparar
+        if (Input.GetKeyDown(KeyCode.C) && gun.activeSelf)
+        {
+            Instantiate(this.bala, holder.position, holder.rotation);
+        }
     }
 
     // Establecer la velocidad
@@ -76,5 +88,15 @@ public class movimientoBueno : MonoBehaviour
     public void resetVelocidad()
     {
         this.velocidad = velocidadInicial;
+    }
+
+    // Colision Trigger entrada
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "gun")
+        {
+            other.gameObject.SetActive(false);
+            gun.SetActive(true);
+        }
     }
 }
