@@ -151,4 +151,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 500
   rb: {fileID: -5814221617277270315}
-  tiempoVida: 1.5
+  tiempoVida: 2

@@ -14,6 +14,9 @@ TagManager:
   - powerup
   - gun
   - bala
+  - objeto destruible
+  - enemigo destruible
+  - escenario
   layers:
   - Default
   - TransparentFX
