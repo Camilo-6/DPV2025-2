@@ -8,4 +8,10 @@ public class managerCambioEscena : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    // Salir del juego
+    public void salirJuego()
+    {
+        Application.Quit();
+    }
 }
