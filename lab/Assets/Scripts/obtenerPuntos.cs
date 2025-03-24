@@ -1,9 +1,12 @@
 using UnityEngine;
+using TMPro;
 
 public class obtenerPuntos : MonoBehaviour
 {
     // Puntaje
     [SerializeField] private int puntaje = 0;
+    // Texto de puntaje
+    [SerializeField] private TMP_Text textoPuntaje;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +23,8 @@ public class obtenerPuntos : MonoBehaviour
             Destroy(other.gameObject);
             // Ganar puntos
             puntaje += 10;
-            Debug.Log("Ganaste 10 puntos, tu puntaje es: " + puntaje);
+            // Actualizar texto de puntaje
+            textoPuntaje.text = puntaje.ToString();
         }
     }
 }
