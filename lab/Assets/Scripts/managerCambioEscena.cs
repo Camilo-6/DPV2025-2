@@ -7,7 +7,7 @@ public class managerCambioEscena : MonoBehaviour
     public void iniciarJuego()
     {
         Debug.Log("Iniciar juego");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("NuevaEscena");
     }
 
     // Salir del juego

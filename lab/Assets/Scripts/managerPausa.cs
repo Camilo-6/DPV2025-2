@@ -40,6 +40,6 @@ public class managerPausa : MonoBehaviour
         pausa.SetActive(false);
         pausado = false;
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 }

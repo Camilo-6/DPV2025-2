@@ -30,7 +30,7 @@ public class chocarEnemigo : MonoBehaviour
                 Destroy(gameObject);
                 */
                 // Cambiar la escena a la escena de Game Over
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("Fin");
             }
             else
             {
