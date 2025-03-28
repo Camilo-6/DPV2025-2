@@ -6,6 +6,7 @@ public class managerCambioEscena : MonoBehaviour
     // Cambiar de escena
     public void iniciarJuego()
     {
+        Debug.Log("Iniciar juego");
         SceneManager.LoadScene(1);
     }
 

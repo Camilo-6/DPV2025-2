@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class chocarEnemigo : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class chocarEnemigo : MonoBehaviour
         {
             if (!inmunidad)
             {
+                /*
                 // Desanidar la camara antes de destruir el jugador
                 Camera.main.transform.SetParent(null);
                 // Mover la camara a (0, 0.673, 0.045)
@@ -26,6 +28,9 @@ public class chocarEnemigo : MonoBehaviour
                 Camera.main.transform.rotation = Quaternion.Euler(0, 0, 0);
                 // Destruir el jugador
                 Destroy(gameObject);
+                */
+                // Cambiar la escena a la escena de Game Over
+                SceneManager.LoadScene(2);
             }
             else
             {

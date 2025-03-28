@@ -12,7 +12,6 @@ public class obtenerPuntos : MonoBehaviour
     void Start()
     {
         puntaje = 0;
-        Debug.Log("Puntaje: " + puntaje);
     }
 
     public void OnTriggerEnter(Collider other)
