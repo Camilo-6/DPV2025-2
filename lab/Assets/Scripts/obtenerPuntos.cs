@@ -4,14 +4,14 @@ using TMPro;
 public class obtenerPuntos : MonoBehaviour
 {
     // Puntaje
-    [SerializeField] private int puntaje = 0;
+    [SerializeField] private int puntaje;
     // Texto de puntaje
     [SerializeField] private TMP_Text textoPuntaje;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        puntaje = 0;
+        puntaje = PlayerPrefs.GetInt("puntos", 0);
+        textoPuntaje.text = puntaje.ToString();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -25,5 +25,10 @@ public class obtenerPuntos : MonoBehaviour
             // Actualizar texto de puntaje
             textoPuntaje.text = puntaje.ToString();
         }
+    }
+
+    public void ReiniciarPuntos()
+    {
+        puntaje = 0;
     }
 }
